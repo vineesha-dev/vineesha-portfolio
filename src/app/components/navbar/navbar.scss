@@ -11,9 +11,31 @@
 .nav-link{
     color:white !important;
     margin-left:20px;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
-
 .nav-link:hover{
     color:#38bdf8 !important;
+}
+@media(max-width:991.98px){
+
+    .navbar{
+        padding:15px;
+    }
+
+    .navbar-collapse{
+        max-height:calc(100vh - 70px);
+        overflow-y:auto;
+        overscroll-behavior:contain;
+    }
+
+    .navbar-nav{
+        margin-top:15px;
+        text-align:center;
+    }
+
+    .nav-link{
+        margin-left:0;
+        margin-bottom:10px;
+    }
+
 }

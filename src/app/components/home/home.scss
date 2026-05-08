@@ -33,4 +33,44 @@
 .hero-image{
     width:85%;
     max-width:450px;
+    transition:all 0.4s ease;
+}
+.hero-section{
+    padding:120px 0;
+}
+.hero-image:hover{
+    transform:translateY(-10px);
+}
+@media(max-width:768px){
+
+    .hero-section{
+        text-align:center;
+        padding:100px 20px;
+    }
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .hero-subtitle{
+        font-size:24px;
+    }
+
+    .hero-description{
+        font-size:16px;
+        max-width:100%;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    .hero-image{
+        width:70%;
+        margin-top:40px;
+    }
+
 }

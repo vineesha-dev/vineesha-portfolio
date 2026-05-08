@@ -1,0 +1,50 @@
+.about-section{
+    padding:100px 0;
+    background-color:#111827;
+    color:white;
+}
+
+.section-title{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+.about-text{
+    font-size:18px;
+    line-height:1.9;
+    color:#cbd5e1;
+    margin-bottom:20px;
+}
+
+.tech-stack{
+    margin-top:40px;
+}
+
+.tech-stack span{
+    display:inline-block;
+    margin:10px;
+    padding:12px 20px;
+    background-color:#1e293b;
+    border-radius:30px;
+    color:#38bdf8;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.tech-stack span:hover{
+    background-color:#38bdf8;
+    color:black;
+}
+.about-section{
+    padding:120px 0;
+}
+.tech-stack span{
+    transition:all 0.3s ease;
+}
+.tech-stack span:hover{
+    background-color:#38bdf8;
+    color:black;
+    transform:scale(1.05);
+}

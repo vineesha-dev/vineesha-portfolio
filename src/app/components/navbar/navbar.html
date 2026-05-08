@@ -1,14 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 fixed-top">
+
     <a class="navbar-brand fw-bold" href="#">
-        Vineesha
+        Portfolio
     </a>
 
-    <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav">
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
 
         <span class="navbar-toggler-icon"></span>
 
@@ -19,19 +22,22 @@
         <ul class="navbar-nav ms-auto">
 
             <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#home" (click)="scrollToSection($event, 'home')">Home</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#about" (click)="scrollToSection($event, 'about')">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills" (click)="scrollToSection($event, 'skills')">Skills</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#projects" (click)="scrollToSection($event, 'projects')">Projects</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contact" (click)="scrollToSection($event, 'contact')">Contact</a>
             </li>
 
         </ul>
@@ -39,7 +45,7 @@
     </div>
 
 </nav>
-<section id="home">
+<!-- <section id="home">
 
 </section>
 <section id="about">
@@ -50,4 +56,4 @@
 </section>
 <section id="contact">
 
-</section>
+</section> -->
