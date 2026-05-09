@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="title desc">
+  <title id="title">Clinical dashboard preview</title>
+  <desc id="desc">Dashboard preview with charts, patient cards, and appointment rows.</desc>
+  <rect width="640" height="380" rx="24" fill="#0f172a"/>
+  <rect x="34" y="34" width="572" height="312" rx="18" fill="#1e293b"/>
+  <rect x="62" y="62" width="132" height="256" rx="14" fill="#111827"/>
+  <rect x="84" y="88" width="72" height="14" rx="7" fill="#38bdf8"/>
+  <rect x="84" y="130" width="88" height="10" rx="5" fill="#64748b"/>
+  <rect x="84" y="162" width="68" height="10" rx="5" fill="#64748b"/>
+  <rect x="84" y="194" width="82" height="10" rx="5" fill="#64748b"/>
+  <rect x="84" y="226" width="58" height="10" rx="5" fill="#64748b"/>
+  <rect x="224" y="62" width="138" height="88" rx="14" fill="#0f172a"/>
+  <rect x="388" y="62" width="168" height="88" rx="14" fill="#0f172a"/>
+  <rect x="246" y="88" width="62" height="12" rx="6" fill="#94a3b8"/>
+  <rect x="246" y="112" width="88" height="20" rx="10" fill="#38bdf8"/>
+  <path d="M420 126c24-46 56-16 70-44 8 20 28 30 44 16" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round"/>
+  <rect x="224" y="176" width="332" height="142" rx="14" fill="#0f172a"/>
+  <rect x="250" y="204" width="94" height="12" rx="6" fill="#38bdf8"/>
+  <rect x="250" y="240" width="260" height="10" rx="5" fill="#64748b"/>
+  <rect x="250" y="272" width="214" height="10" rx="5" fill="#64748b"/>
+  <rect x="250" y="304" width="242" height="10" rx="5" fill="#64748b"/>
+</svg>
