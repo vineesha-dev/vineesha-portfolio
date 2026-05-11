@@ -1,59 +1,122 @@
-# VineeshaPortfolio
+# Vineesha Albert — Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
+A personal developer portfolio showcasing my projects, skills, and experience as a .NET Backend Developer. Built with Angular and styled with Bootstrap and SCSS for a clean, responsive experience across devices.
 
-## Development server
+🔗 **Live Site:** [https://your-deployed-url.com](https://your-deployed-url.com)
+📧 **Contact:** [vineesha073@gmail.com](mailto:vineesha073@gmail.com)
+💼 **LinkedIn:** [linkedin.com/in/vineeshaalbert](https://www.linkedin.com/in/vineeshaalbert)
 
-To start a local development server, run:
+---
+
+## 📸 Preview
+
+![Portfolio Screenshot](./public/screenshot.png)
+
+---
+
+## 🛠️ Built With
+
+| Technology   | Purpose                          |
+| ------------ | -------------------------------- |
+| Angular 20   | Frontend framework (SPA)         |
+| TypeScript   | Type-safe development            |
+| Bootstrap 5  | Responsive grid and components   |
+| SCSS         | Custom styling and theming       |
+| Angular CLI  | Tooling, build, and dev server   |
+
+---
+
+## ✨ Features
+
+- **Responsive design** — works on mobile, tablet, and desktop
+- **Projects showcase** — featured work with live demos and GitHub links
+- **Skills section** — categorized tech stack (backend, frontend, database, tools)
+- **About section** — background, education, and certifications
+- **Contact section** — easy way for recruiters and collaborators to reach out
+- **Smooth scrolling navigation** — single-page experience with anchor links
+
+---
+
+## 🚀 Run Locally
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI: `npm install -g @angular/cli`
+
+### Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/vineesha-dev/vineesha-portfolio.git
+
+# Navigate into the project
+cd vineesha-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open [http://localhost:4200](http://localhost:4200) in your browser. The app will auto-reload when you change any source file.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 📦 Build for Production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The compiled output will be placed in the `dist/` directory, optimized for performance.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📁 Project Structure
 
-```bash
-ng test
+```
+vineesha-portfolio/
+├── public/              # Static assets (images, favicon)
+├── src/
+│   ├── app/             # Components, services, modules
+│   ├── assets/          # Images, fonts, icons
+│   ├── styles.scss      # Global styles
+│   └── index.html       # Main HTML file
+├── angular.json         # Angular workspace configuration
+├── package.json         # Dependencies and scripts
+└── README.md
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 👩‍💻 About Me
 
-```bash
-ng e2e
-```
+I'm a **.NET Backend Developer** currently working at **CodeApps Technology**, where I build and maintain RESTful APIs and database-driven applications using ASP.NET Core, C#, and SQL Server.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**Background:**
+- 🎓 Master of Computer Applications (MCA), Mohandas College of Engineering and Technology
+- 📜 Microsoft .NET Full Stack Certified — Faith Infotech, Technopark
+- 📍 Based in Marthandam, Tamil Nadu, India
 
-## Additional Resources
+**Currently learning:** Modern Angular (v17+ with signals), advanced SQL optimization, and cloud deployment.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 📫 Let's Connect
+
+- 🔗 **LinkedIn:** [linkedin.com/in/vineeshaalbert](https://www.linkedin.com/in/vineeshaalbert)
+- 🔗 **GitHub:** [github.com/vineesha-dev](https://github.com/vineesha-dev)
+- 📧 **Email:** [vineesha2609@gmail.com](mailto:vineesha2609@gmail.com)
+
+---
+
+## 📄 License
+
+This project is open source and available for reference. Feel free to fork it and adapt it for your own portfolio — a star ⭐ is appreciated if you find it helpful!
+
+---
+
+_Built with ❤️ using Angular_
