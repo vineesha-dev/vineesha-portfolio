@@ -1,65 +1,76 @@
 <section id="home" class="hero-section">
 
+    <div class="hero-glow" aria-hidden="true"></div>
+
     <div class="container">
 
-        <div class="row align-items-center min-vh-100">
+        <div class="row align-items-center min-vh-100 g-5">
 
-            <div class="col-lg-6">
+            <div class="col-lg-7">
+
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    Available for full-time opportunities
+                </span>
 
                 <h1 class="hero-title">
-                    Hi, I'm <span>Vineesha Albert A</span>
+                    Building reliable web<br>
+                    applications with
+                    <span class="accent">.NET &amp; Angular</span>
                 </h1>
 
                 <h2 class="hero-subtitle">
-                    <span class="typing-text">ASP.NET Core & Angular Developer</span>
+                    <span class="hero-prefix">I'm Vineesha &mdash;</span>
+                    <span class="role-rotator" [attr.key]="currentRole">{{ currentRole }}</span>
                 </h2>
 
                 <p class="hero-description">
-                    I build responsive and modern web applications using
-                    ASP.NET Core, Angular, and SQL Server.
+                    I design and ship full-stack applications &mdash; from
+                    clean Angular interfaces to ASP.NET Core APIs and
+                    well-structured SQL Server databases. I care about
+                    maintainable code, thoughtful UX, and getting the
+                    details right.
                 </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-info btn-lg">
+                        <i class="bi bi-folder2-open"></i>
+                        View my work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-send"></i>
+                        Get in touch
+                    </a>
+
+                </div>
 
                 <div class="hero-socials" aria-label="Social links">
                     <a href="mailto:vineesha2609@gmail.com" aria-label="Email">
                         <i class="bi bi-envelope-fill"></i>
                     </a>
 
-                    <a href="https://github.com/vineesha-dev" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/vineesha-dev" target="_blank" rel="noopener" aria-label="GitHub">
                         <i class="bi bi-github"></i>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/vineeshaalbert/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/vineeshaalbert/" target="_blank" rel="noopener" aria-label="LinkedIn">
                         <i class="bi bi-linkedin"></i>
                     </a>
                 </div>
 
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="btn btn-info btn-lg me-3">
-                        <i class="bi bi-folder2-open"></i>
-                        View Projects
-                    </a>
-
-                    <a 
-                        href="https://github.com/vineesha-dev"
-                        target="_blank"
-                        class="btn btn-outline-light btn-lg">
-
-                        <i class="bi bi-github"></i>
-                        GitHub
-
-                    </a>
-
-                </div>
-
             </div>
 
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-5 text-center">
 
-                <img
-                    src="/images/developer.svg"
-                    alt="Developer workspace illustration"
-                    class="hero-image">
+                <div class="hero-visual">
+                    <div class="hero-orb" aria-hidden="true"></div>
+                    <img
+                        src="/images/developer.svg"
+                        alt="Developer workspace illustration"
+                        class="hero-image">
+                </div>
 
             </div>
 

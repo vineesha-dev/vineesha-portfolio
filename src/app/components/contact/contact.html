@@ -2,88 +2,117 @@
 
     <div class="container">
 
-        <h2 class="section-title text-center">
-            Contact Me
-        </h2>
-
-        <div class="row justify-content-center mt-5 g-4">
-
-            <!-- Email -->
-
-            <div class="col-md-4">
-
-                <div class="contact-card text-center">
-
-                    <i class="bi bi-envelope-fill"></i>
-
-                    <h4>Email</h4>
-
-                    <a href="mailto:vineesha2609@gmail.com">
-                        vineesha2609@gmail.com
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- GitHub -->
-
-            <div class="col-md-4">
-
-                <div class="contact-card text-center">
-
-                    <i class="bi bi-github"></i>
-
-                    <h4>GitHub</h4>
-
-                    <a 
-                       href="https://github.com/vineesha-dev"
-                       target="_blank">
-
-                        github.com/vineesha-dev
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- LinkedIn -->
-
-            <div class="col-md-4">
-
-                <div class="contact-card text-center">
-
-                    <i class="bi bi-linkedin"></i>
-
-                    <h4>LinkedIn</h4>
-
-                    <a 
-                       href="https://www.linkedin.com/in/vineeshaalbert/"
-                       target="_blank">
-
-                        LinkedIn Profile
-
-                    </a>
-
-                </div>
-
-            </div>
-
+        <div class="section-head">
+            <span class="eyebrow">Get in touch</span>
+            <h2 class="section-title">Let's build something together</h2>
+            <p class="section-subtitle">
+                Open to junior and mid-level full-stack roles, freelance work,
+                and collaboration on interesting projects. I usually reply within a day.
+            </p>
         </div>
 
-        <!-- Resume Button -->
+        <div class="row g-4 align-items-stretch">
 
-        <div class="text-center mt-5">
+            <div class="col-lg-5">
 
-            <a 
-               href="#"
-               class="btn btn-info btn-lg">
+                <div class="contact-info">
 
-                <i class="bi bi-download"></i>
-                Download Resume
+                    <a href="mailto:vineesha2609@gmail.com" class="contact-card">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">vineesha2609&#64;gmail.com</span>
+                        </div>
+                    </a>
 
-            </a>
+                    <a href="https://github.com/vineesha-dev" target="_blank" rel="noopener" class="contact-card">
+                        <i class="bi bi-github"></i>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/vineesha-dev</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/vineeshaalbert/" target="_blank" rel="noopener" class="contact-card">
+                        <i class="bi bi-linkedin"></i>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">in/vineeshaalbert</span>
+                        </div>
+                    </a>
+
+                    <a href="/Vineesha-Albert-Resume.pdf" download class="resume-cta">
+                        <i class="bi bi-file-earmark-arrow-down"></i>
+                        <div>
+                            <span class="resume-label">Resume</span>
+                            <span class="resume-value">Download PDF</span>
+                        </div>
+                        <i class="bi bi-arrow-right resume-arrow"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <form class="contact-form" #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="name">Your name</label>
+                            <input id="name" name="name" type="text"
+                                   class="form-control" placeholder="Jane Doe"
+                                   [(ngModel)]="model.name" #name="ngModel"
+                                   required minlength="2">
+                            <small class="error-text" *ngIf="name.touched && name.invalid">
+                                Please enter your name.
+                            </small>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email"
+                                   class="form-control" placeholder="jane@example.com"
+                                   [(ngModel)]="model.email" #email="ngModel"
+                                   required email>
+                            <small class="error-text" *ngIf="email.touched && email.invalid">
+                                Please enter a valid email.
+                            </small>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="subject">Subject</label>
+                            <input id="subject" name="subject" type="text"
+                                   class="form-control" placeholder="What's this about?"
+                                   [(ngModel)]="model.subject">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                      class="form-control" placeholder="Tell me a bit about your project or role..."
+                                      [(ngModel)]="model.message" #message="ngModel"
+                                      required minlength="10"></textarea>
+                            <small class="error-text" *ngIf="message.touched && message.invalid">
+                                A short message (10+ characters) helps me reply faster.
+                            </small>
+                        </div>
+
+                        <div class="col-12 form-footer">
+                            <button type="submit" class="btn btn-info btn-lg">
+                                <i class="bi bi-send-fill"></i>
+                                Send message
+                            </button>
+                            <small class="form-hint">Opens your email app with the message pre-filled.</small>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
 
         </div>
 

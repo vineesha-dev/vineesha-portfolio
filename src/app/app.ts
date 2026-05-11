@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 import { Navbar } from './components/navbar/navbar';
 import { Home } from './components/home/home';
@@ -12,7 +11,6 @@ import { Skills } from './components/skills/skills';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     Navbar,
     Home,
     About,

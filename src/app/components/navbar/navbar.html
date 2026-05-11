@@ -1,59 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top" [class.scrolled]="scrolled">
 
-    <a class="navbar-brand fw-bold" href="#">
-        Portfolio
-    </a>
+    <div class="container">
 
-    <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#home" (click)="scrollToSection($event, 'home')">
+            <span class="brand-mark">VA</span>
+            <span class="brand-text">Vineesha Albert</span>
+        </a>
 
-        <span class="navbar-toggler-icon"></span>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-    </button>
+            <span class="navbar-toggler-icon"></span>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
 
-        <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-            <li class="nav-item">
-                <a class="nav-link" href="#home" (click)="scrollToSection($event, 'home')">Home</a>
-            </li>
+            <ul class="navbar-nav ms-auto align-items-lg-center">
 
-            <li class="nav-item">
-                <a class="nav-link" href="#about" (click)="scrollToSection($event, 'about')">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills" (click)="scrollToSection($event, 'skills')">Skills</a>
-            </li>
+                <li class="nav-item" *ngFor="let id of sections">
+                    <a class="nav-link"
+                       [class.active]="activeSection === id"
+                       [attr.href]="'#' + id"
+                       (click)="scrollToSection($event, id)">
+                        {{ id === 'home' ? 'Home' : (id | titlecase) }}
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#projects" (click)="scrollToSection($event, 'projects')">Projects</a>
-            </li>
+                <li class="nav-item nav-cta">
+                    <a class="btn btn-info btn-sm"
+                       href="#contact"
+                       (click)="scrollToSection($event, 'contact')">
+                        Let's talk
+                    </a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#contact" (click)="scrollToSection($event, 'contact')">Contact</a>
-            </li>
+            </ul>
 
-        </ul>
+        </div>
 
     </div>
 
 </nav>
-<!-- <section id="home">
-
-</section>
-<section id="about">
-
-</section>
-<section id="projects">
-
-</section>
-<section id="contact">
-
-</section> -->
