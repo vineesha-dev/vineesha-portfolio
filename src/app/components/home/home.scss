@@ -31,6 +31,7 @@
     font-weight: 500;
     color: #cbd5e1;
     margin-bottom: 22px;
+    animation: hero-reveal 0.7s var(--ease-premium) 0.08s both;
 }
 
 .status-dot {
@@ -56,6 +57,7 @@
     letter-spacing: -0.03em;
     color: var(--text-primary);
     margin-bottom: 22px;
+    animation: hero-reveal 0.75s var(--ease-premium) 0.16s both;
 }
 
 .hero-title .accent {
@@ -74,6 +76,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
+    animation: hero-reveal 0.75s var(--ease-premium) 0.24s both;
 }
 
 .hero-prefix {
@@ -98,6 +101,7 @@
     color: #94a3b8;
     max-width: 580px;
     margin-bottom: 36px;
+    animation: hero-reveal 0.75s var(--ease-premium) 0.32s both;
 }
 
 .hero-buttons {
@@ -105,6 +109,7 @@
     flex-wrap: wrap;
     gap: 14px;
     margin-bottom: 36px;
+    animation: hero-reveal 0.75s var(--ease-premium) 0.4s both;
 }
 
 .hero-buttons .btn {
@@ -115,6 +120,14 @@
     font-size: 15px;
 }
 
+.hero-buttons .btn:hover i {
+    transform: translateX(2px);
+}
+
+.hero-buttons .btn i {
+    transition: transform var(--transition);
+}
+
 .hero-buttons .btn-info:hover {
     box-shadow: 0 14px 30px rgba(14, 165, 233, 0.35);
 }
@@ -122,6 +135,7 @@
 .hero-socials {
     display: flex;
     gap: 12px;
+    animation: hero-reveal 0.75s var(--ease-premium) 0.48s both;
 }
 
 .hero-socials a {
@@ -136,7 +150,7 @@
     color: #cbd5e1;
     font-size: 18px;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: color var(--transition), background-color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .hero-socials a:hover {
@@ -144,11 +158,19 @@
     border-color: rgba(56, 189, 248, 0.5);
     color: #38bdf8;
     transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(14, 165, 233, 0.22);
 }
 
 .hero-visual {
     position: relative;
     display: inline-block;
+    transition: transform var(--transition-slow), filter var(--transition-slow);
+    animation: hero-reveal 0.85s var(--ease-premium) 0.28s both;
+    will-change: transform;
+}
+
+.hero-visual:hover {
+    transform: translateY(-6px) rotate(0.5deg);
 }
 
 .hero-orb {
@@ -168,6 +190,22 @@
     object-fit: contain;
     filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.4));
     animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero-visual:hover .hero-image {
+    filter: drop-shadow(0 30px 48px rgba(14, 165, 233, 0.18)) drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes hero-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes hero-float {

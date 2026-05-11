@@ -17,7 +17,9 @@
     --radius-sm: 10px;
     --radius-md: 16px;
     --radius-lg: 22px;
-    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition: 0.25s var(--ease-premium);
+    --transition-slow: 0.55s var(--ease-premium);
 }
 
 * {
@@ -28,6 +30,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 86px;
 }
 
 body {
@@ -53,7 +56,7 @@ p {
 
 a {
     color: var(--accent);
-    transition: color var(--transition);
+    transition: color var(--transition), opacity var(--transition);
 }
 
 a:hover {
@@ -88,6 +91,36 @@ a:hover {
 
 section {
     scroll-margin-top: 80px;
+    animation: section-fade-up 0.7s var(--ease-premium) both;
+    will-change: transform, opacity;
+}
+
+section:nth-of-type(2) {
+    animation-delay: 0.08s;
+}
+
+section:nth-of-type(3) {
+    animation-delay: 0.14s;
+}
+
+section:nth-of-type(4) {
+    animation-delay: 0.2s;
+}
+
+section:nth-of-type(5) {
+    animation-delay: 0.26s;
+}
+
+@keyframes section-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .eyebrow {
@@ -128,6 +161,7 @@ section {
 .section-head {
     text-align: center;
     margin-bottom: 60px;
+    animation: soft-reveal 0.65s var(--ease-premium) both;
 }
 
 .btn {
@@ -136,11 +170,16 @@ section {
     letter-spacing: 0.01em;
     border-radius: 10px !important;
     padding: 12px 22px;
-    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition) !important;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition), filter var(--transition) !important;
+    will-change: transform;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
 }
 
 .btn-info {
@@ -165,10 +204,42 @@ section {
     border-color: var(--text-primary) !important;
     background: rgba(226, 232, 240, 0.06) !important;
     color: var(--text-primary) !important;
+    box-shadow: 0 12px 26px rgba(2, 6, 23, 0.28);
 }
 
 img {
     max-width: 100%;
+    transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+
+@keyframes soft-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    section,
+    .section-head {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -179,5 +250,6 @@ img {
     section {
         padding-left: 20px;
         padding-right: 20px;
+        animation-duration: 0.5s;
     }
 }

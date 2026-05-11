@@ -10,8 +10,10 @@
     padding: 36px 32px;
     border-radius: var(--radius-lg);
     height: 100%;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-slow), border-color var(--transition-slow), box-shadow var(--transition-slow), background-color var(--transition-slow);
     position: relative;
+    overflow: hidden;
+    will-change: transform;
 }
 
 .skill-card::before {
@@ -25,16 +27,19 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-slow);
     pointer-events: none;
 }
 
-.skill-card:hover {
+.skill-card:hover,
+.skill-card:focus-within {
     transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.22);
     box-shadow: var(--shadow-strong);
 }
 
-.skill-card:hover::before {
+.skill-card:hover::before,
+.skill-card:focus-within::before {
     opacity: 1;
 }
 
@@ -49,13 +54,15 @@
     color: var(--accent);
     font-size: 26px;
     margin-bottom: 22px;
-    transition: all 0.3s ease;
+    transition: transform var(--transition-slow), background-color var(--transition-slow), color var(--transition-slow), box-shadow var(--transition-slow);
 }
 
-.skill-card:hover .skill-icon {
+.skill-card:hover .skill-icon,
+.skill-card:focus-within .skill-icon {
     background: var(--accent);
     color: var(--bg-base);
     transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(14, 165, 233, 0.22);
 }
 
 .skill-card h3 {
@@ -87,6 +94,8 @@
     padding: 10px 0;
     border-bottom: 1px solid var(--border-soft);
     color: #cbd5e1;
+    border-radius: 8px;
+    transition: transform var(--transition), background-color var(--transition), padding-left var(--transition), border-color var(--transition);
 }
 
 .skill-card ul li:last-child {
@@ -97,12 +106,29 @@
     font-size: 15px;
     font-weight: 600;
     color: var(--text-primary);
+    transition: color var(--transition);
 }
 
 .skill-card ul li small {
     font-size: 12px;
     color: var(--text-muted);
     margin-top: 2px;
+    transition: color var(--transition);
+}
+
+.skill-card ul li:hover {
+    transform: translateX(4px);
+    padding-left: 8px;
+    background: rgba(56, 189, 248, 0.055);
+    border-color: rgba(56, 189, 248, 0.16);
+}
+
+.skill-card ul li:hover span {
+    color: var(--accent);
+}
+
+.skill-card ul li:hover small {
+    color: #cbd5e1;
 }
 
 @media (max-width: 768px) {
