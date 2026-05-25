@@ -2,7 +2,7 @@
 
 A personal developer portfolio showcasing my projects, skills, and experience as a .NET Backend Developer. Built with Angular and styled with Bootstrap and SCSS for a clean, responsive experience across devices.
 
-🔗 **Live Site:** [https://your-deployed-url.com](https://vineesha-portfolio.netlify.app)
+🔗 **Live Site:** [[https://your-deployed-url.com](https://vineesha-portfolio.netlify.app)](https://vineesha-portfolio.netlify.app)
 📧 **Contact:** [vineesha073@gmail.com](mailto:vineesha073@gmail.com)
 💼 **LinkedIn:** [linkedin.com/in/vineeshaalbert](https://www.linkedin.com/in/vineeshaalbert)
 
