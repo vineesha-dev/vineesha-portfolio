@@ -10,7 +10,7 @@ A personal developer portfolio showcasing my projects, skills, and experience as
 
 ## 📸 Preview
 
-![Portfolio Screenshot](./public/screenshot.png)
+![Portfolio Screenshot](./public/images/Screenshot.png)
 
 ---
 
